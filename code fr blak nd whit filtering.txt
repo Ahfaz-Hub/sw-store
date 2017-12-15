@@ -1,7 +1,6 @@
 //black and white filter
 public class TestBlackAndWhite {
-
-    public static void main(String[] args) {
+public static void main(String[] args) {
         new TestBlackAndWhite();
     }
 
@@ -13,7 +12,6 @@ public class TestBlackAndWhite {
                     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 } catch (Exception ex) {
                 }
-
                 JFrame frame = new JFrame("Test");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.add(new TestPane());
@@ -73,7 +71,5 @@ public class TestBlackAndWhite {
 
             }
         }
-
-
-    }
+ }
 }
