@@ -3,7 +3,6 @@ package net.codejava.servlet;
  
 import java.io.IOException;
 import java.io.PrintWriter;
- 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +16,6 @@ public class LoginServlet extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
          
         String searchimage = request.getParameter("searchimage");
-        
         System.out.println("searchimage: " + searchimage);
         PrintWriter writer = response.getWriter();
         String htmlRespone = "<html>";
@@ -25,7 +23,5 @@ public class LoginServlet extends HttpServlet {
           htmlRespone += "</html>";
       
         writer.println(htmlRespone);
-         
-    }
- 
-}
+          }
+ }
