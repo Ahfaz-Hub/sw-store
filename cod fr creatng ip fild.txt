@@ -1,0 +1,31 @@
+//here is the prog for creating input field and submit button
+package net.codejava.servlet;
+ 
+import java.io.IOException;
+import java.io.PrintWriter;
+ 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+ 
+@WebServlet("Servlet")
+public class LoginServlet extends HttpServlet {
+ 
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+         
+        String searchimage = request.getParameter("searchimage");
+        
+        System.out.println("searchimage: " + searchimage);
+        PrintWriter writer = response.getWriter();
+        String htmlRespone = "<html>";
+        htmlRespone += "<h2>Your searchimage is: " + searchimage + "<br/>";      
+          htmlRespone += "</html>";
+      
+        writer.println(htmlRespone);
+         
+    }
+ 
+}
